@@ -35,14 +35,13 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- add your plugins here
-      { "catppuccin/nvim", name = "catppuccin", priority = 1000 }, --catpuccin color scheme, not sure if it is currently working
-      { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {}},
+      { "eldritch-theme/eldritch.nvim", lazy = false, priority = 1000, opts = {}},
       { "nvim-telescope/telescope.nvim", tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' }}, -- This is the live file system search and grep package
       { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }
     },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "catppucccin" } }, -- This runs the installed color scheme of the plugins loaded
+  install = { colorscheme = { "eldritch" } }, -- This runs the installed color scheme of the plugins loaded
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
