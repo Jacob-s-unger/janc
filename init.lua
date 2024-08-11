@@ -3,7 +3,7 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number") -- Makes the files have the line numbers on the side
-vim.cmd("set cc=80") -- Set atn 80 column border for good coding style I guess...
+-- vim.cmd("set cc=80") -- Set atn 80 column border for good coding style I guess...
 vim.g.mapleader = " "
 
 -- Bootstrap lazy.nvim 
@@ -46,7 +46,7 @@ require("lazy").setup({
          config = function()
             require('dashboard').setup {}
                end,
-         dependencies = { {'nvim-tree/nvim-web-devicons'}}},
+         dependencies = {{'nvim-tree/nvim-web-devicons'}}},
     --------------------------------------------------------
       { "nvim-neo-tree/neo-tree.nvim", branch = "v3.x", dependencies = { "nvim-lua/plenary.nvim","nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim"}}
     --------------------------------------------------------
@@ -56,6 +56,8 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
 
 
 local config = require("nvim-treesitter.configs")
