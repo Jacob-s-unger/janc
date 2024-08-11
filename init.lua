@@ -33,6 +33,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
+
+require("lazy").setup(plugins)
+
 require("lazy").setup({
   spec = {
     -- add your plugins here
