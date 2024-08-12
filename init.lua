@@ -41,16 +41,10 @@ require("lazy").setup("plugins") --working! :) Plugins are now broken into subfi
   -- colorscheme that will be used when installing plugins.
   -- automatically check for plugin updates
 
-vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {})
 -- vim.keymap.set('n', '<C-h>', ':Neotree toggle<CR>', {})
 
 
-local config = require("nvim-treesitter.configs")
-config.setup({
-  ensure_installed = {"lua", "javascript", "rust"},
-  highlight = { enable = true },
-  indent = { enable = true }
-})
+
 
 
 
